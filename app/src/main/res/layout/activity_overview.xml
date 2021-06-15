@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout style="@style/linear_layout_page"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        style="@style/linear_layout_top_bar"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            style="@style/text_view_top_bar"
+            android:text="Monatliche Ausgaben"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="56dp"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_entry_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@android:color/transparent"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/include_bottom_navigation_bar"/>
+
+</FrameLayout>
